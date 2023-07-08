@@ -13,15 +13,21 @@ public class Caster : MonoBehaviour
 			//Is now ready
 			isReady = true;
 			//Instantly cast if autoing
-			if(autoCast) Cast();
+			if(autoCast) Casting();
 		}
 		//Timing firerate when not ready
 		if(!isReady) firerateTimer += Time.deltaTime;
 	}
 
-    public virtual void Cast()
+    public virtual void Casting()
 	{
 		//Don't cast if not ready
 		if(!isReady) return;
+	}
+
+	protected void CastEnded()
+	{
+		isReady = false;
+		firerateTimer -= firerateTimer;
 	}
 }
