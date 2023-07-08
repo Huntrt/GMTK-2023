@@ -1,0 +1,39 @@
+Movement:
+	✓ Chasing
+	✓ Spacing
+Enemy:
+	▪ Stats:
+		▪ Cost
+		▪ Speed
+		▪ Firerate
+		▪ Damage
+	▪ Attacks:
+		▪ Firing - firing projectile in arrow of vector.
+		▪ Slash - melee attack in an hitbox.
+		▪ Detonate - explode when get in certain range of protag.
+Spawn:
+	▪ Gain money overtime.
+	▪ Have an max capacity of money.
+	▪ Spending when spawning enemy.
+	▪ Have 10 slot?
+	▪ Select spawn slot when press it key.
+	▪ Can re-bind each slot key but default are 1 -> 0.
+	▪ Spawn selected when press on hitbox that allow to.
+Upgrade:
+	▪ 3 option each option will upgrade both the enemy and protag.
+	Types:
+		▪ More enemy slot.
+		▪ Unlock new enemy.
+			▪ Select which enemy to override if maxxed enemy slot.
+		▪ Increase base stats on an enemy.
+		▪ Increase money income and capacity.
+Protagonist:
+	▪ Attack enemy that aiming at it.
+	▪ Switch to fast weapon to clear alot of weak enemy.
+	▪ Dodging bullet.
+	▪ Using medkit when needed.
+	▪ Medkit recharge overtime.
+	▪ Display it GUI.
+General:
+	▪ Health system.
+	▪ Exp System.
