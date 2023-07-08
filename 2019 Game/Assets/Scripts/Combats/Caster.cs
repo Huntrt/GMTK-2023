@@ -7,6 +7,12 @@ public class Caster : MonoBehaviour
 	public float firerate; float firerateTimer;
 	public event Action onCast;
 
+	void OnEnable()
+	{
+		//Reset firerate when it enable
+		isReady = false; firerateTimer -= firerateTimer;
+	}
+
 	void Update()
 	{
 		//When has reached the timer for firerate
@@ -15,7 +21,7 @@ public class Caster : MonoBehaviour
 			//Is now ready
 			isReady = true;
 			//Instantly cast if autoing
-			if(autoCast) Casting();
+			if(autoCast) {Casting(); print("AA");}
 		}
 		//Timing firerate when not ready
 		if(!isReady) firerateTimer += Time.deltaTime;
