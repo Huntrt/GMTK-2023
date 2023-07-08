@@ -7,8 +7,9 @@ public class Strike_Projectile : Strike
 	[SerializeField] Rigidbody2D rb;
 	[SerializeField] TrailRenderer trail;
 
-	void OnEnable()
+	protected override void OnEnable()
 	{
+		base.OnEnable();
 		//Reseting previous position
 		prePos = rb.position;
 		//Reseting travelled distance
