@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnControl : MonoBehaviour
@@ -16,6 +16,10 @@ public class SpawnControl : MonoBehaviour
 
 	void Update()
 	{
+		//todo: add keybind for 'single spawn'
+		if(Input.GetKeyDown(KeyCode.Mouse0)) Spawning();
+		//todo: add keybind for 'rapid spawn'
+		if(Input.GetKey(KeyCode.Mouse1)) Spawning();
 		#region Select with key
 		//todo: replace with keybinds (clean up?)
 		if(Input.GetKeyDown(KeyCode.Alpha1)) Selecting(0);
@@ -63,5 +67,16 @@ public class SpawnControl : MonoBehaviour
 		//Currently select slot indicator to be yellow
 		selected.selectIndicator.color = Color.yellow;
 	}
+
+	void Spawning()
+	{
+		//Allow to spawn when cooldown over
+		if(!selected.isCooled) return;
+		//Allow to spawn when have enough cash to spend on it
+		if(!SpawnManager.i.currency.Spending(selected.spawning.cost)) return;
+		//Reset the selected slot cooldown
+		selected.RestartCool();
+		//Pooling the selected spawning at mouse position
+		Pooler.i.Create(selected.spawning.gameObject, MousePosition.i.World(), Quaternion.identity);
 	}
 }
