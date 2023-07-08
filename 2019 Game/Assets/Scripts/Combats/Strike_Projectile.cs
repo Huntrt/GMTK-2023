@@ -29,8 +29,8 @@ public class Strike_Projectile : Strike
 
 	void FixedUpdate()
 	{
-		//Moving forward with speed
-		rb.velocity = transform.forward * velocity;
+		//Moving right with set velocity
+		rb.velocity = transform.right * velocity;
 		//Get how long has travelled this frame
 		travelled += Vector3.Distance(prePos, rb.position);
 		//If has reached max range
@@ -69,6 +69,7 @@ public class Strike_Projectile : Strike
 
 	void End()
 	{
-		
+		//Deactive the projectile
+		gameObject.SetActive(false);
 	}
 }
