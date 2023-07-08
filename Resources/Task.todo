@@ -3,6 +3,7 @@ Movement:
 	✓ Spacing
 Enemy:
 	▪ Stats:
+		▪ Cooldown
 		▪ Cost
 		✓ Speed
 		✓ Firerate
@@ -12,6 +13,23 @@ Enemy:
 		✓ Firing - firing projectile in array of vector.
 		▪ Slash - melee attack in an hitbox.
 		▪ Detonate - explode when get in certain range of protag.
+	▪ List:
+		▪ 1. Missile - track and explode.
+		▪ 2. Flock - fast moving and melee attack.
+		▪ 3. Turret - fire bullet but fragile.
+		▪ 4. Dog - fast and deadly with decent health
+		▪ 5. Hunter - long range attack.
+		▪ 6. Zombie - slow moving but high health.
+		▪ 7. Rusher - increase moving speed of nearby enemy. @consider
+		▪ 8. Gunner - Using an pistol.
+		▪ 9. Predator - faster tracking and bigger explode.
+		▪ 10. Shielder - High health but slow moving.
+		▪ 11. Doctor - heal lowest health enemy in radius. @consider
+		▪ 12. Assasin - hidden and appear when attack range.
+		▪ 13. Pack - Pack of 3 dog.
+		▪ 14. Enrage - Massively increase move speed of nearby enemy. @consider
+		▪ 15. Healer - heal every enemy in an radius. @consider
+		▪ 16. Brute - strong and tanky.
 Spawn:
 	▪ Gain money overtime.
 	▪ Have an max capacity of money.
