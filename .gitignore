@@ -16,6 +16,10 @@
 
 # MemoryCaptures are removed
 
+# TextMesh Pro Package
+**/Assets/TextMesh Pro.meta
+**/Assets/TextMesh Pro/*
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
