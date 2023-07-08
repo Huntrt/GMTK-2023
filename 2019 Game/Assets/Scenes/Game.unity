@@ -963,7 +963,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawning
       value: 
-      objectReference: {fileID: 5223776068987325574, guid: d5a9a064548b1ef4f8e0d545216fd1bc,
+      objectReference: {fileID: 1895714931825958616, guid: fae9ed5423444494ba17fd83946c6eac,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2baf42126b93a8f499e61f2fdca231ad, type: 3}

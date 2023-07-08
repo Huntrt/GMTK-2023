@@ -4832,7 +4832,7 @@ MonoBehaviour:
   hurtbox: {fileID: 6398178337252846829}
   damage: 10
   velocity: 0
-  range: 0.1
+  range: 1
   piercing: 5
   rb: {fileID: 1736882768118983402}
   trail: {fileID: 0}

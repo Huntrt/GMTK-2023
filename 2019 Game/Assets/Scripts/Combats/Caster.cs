@@ -21,7 +21,7 @@ public class Caster : MonoBehaviour
 			//Is now ready
 			isReady = true;
 			//Instantly cast if autoing
-			if(autoCast) {Casting(); print("AA");}
+			if(autoCast) {Casting();}
 		}
 		//Timing firerate when not ready
 		if(!isReady) firerateTimer += Time.deltaTime;

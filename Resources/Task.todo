@@ -67,3 +67,7 @@ Protagonist:
 General:
 	▪ Health system.
 	✓ Object pooling.
+
+Bugs:
+	▪ Explosion strike are physic collide with protag @minimal
+		Just cause visual bug replace it with trigger or raycast should fix

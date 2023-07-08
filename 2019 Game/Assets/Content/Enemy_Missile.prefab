@@ -117,7 +117,7 @@ MonoBehaviour:
   firepoints:
   - {fileID: 1895714931825958622}
   caster: {fileID: 1895714931825958619}
-  detect: 0.1
+  detect: 0.3
   target: {fileID: 0}
 --- !u!114 &1895714931825958620
 MonoBehaviour:
