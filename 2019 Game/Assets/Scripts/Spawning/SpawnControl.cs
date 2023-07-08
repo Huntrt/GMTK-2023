@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SpawnControl : MonoBehaviour
 {
+	[SerializeField] GameObject slotGUIPrefab;
+	[SerializeField] Transform slotGUIGroup;
 	[SerializeField] List<SpawnSlot> slots = new List<SpawnSlot>();
 	[SerializeField] int currentlySelect;
 	SpawnSlot selected {get => slots[currentlySelect];}
@@ -34,6 +36,24 @@ public class SpawnControl : MonoBehaviour
 			slots[s].Cooling();
 		}
 	}
+
+	void NewSlot(EnemySpawning enemy)
+	{
+		//temp: max amount of slot allowing
+		if(slots.Count >= 10) {Debug.LogError("Maxxed slot amount"); return;}
+		//Create an new slot 
+		GameObject newSlotGUI = Instantiate(slotGUIPrefab);
+		//Group the new slot
+		newSlotGUI.transform.SetParent(slotGUIGroup);
+		//Get the spawn slot component of slot gui just create
+		SpawnSlot newSlotSpawn = newSlotGUI.GetComponent<SpawnSlot>();
+		//Added new slot into list
+		slots.Add(newSlotSpawn);
+		//Set the given enemy is the enemy this slot will have
+		newSlotSpawn.spawning = enemy;
+		newSlotSpawn.RefreshInfo();
+	}
+
 	void Selecting(int index)
 	{
 		//Turn the previous select slot indicator to white
