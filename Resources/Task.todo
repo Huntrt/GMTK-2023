@@ -1,3 +1,10 @@
+Outlines:
+	▪ Spawning
+	▪ Enemy
+	▪ Protag
+	▪ Leveling
+	▪ Modifier
+
 Movement:
 	✓ Chasing
 	✓ Spacing
@@ -8,6 +15,7 @@ Enemy:
 		✓ Speed
 		✓ Firerate
 		▪ Damage
+		▪ Exp Drop
 	▪ Attacks:
 		✓ Attacking when get in range
 		✓ Firing - firing projectile in array of vector.
@@ -31,29 +39,31 @@ Enemy:
 		▪ 15. Healer - heal every enemy in an radius. @consider
 		▪ 16. Brute - strong and tanky.
 Spawn:
-	▪ Gain money overtime.
-	▪ Have an max capacity of money.
+	▪ Gain cash overtime (income).
+	▪ Have an max capacity of cash.
 	▪ Spending when spawning enemy.
 	▪ Have 10 slot?
+	▪ Able to buy new slot max at 10.
 	▪ Select spawn slot when press it key.
 	▪ Can re-bind each slot key but default are 1 -> 0.
-	▪ Spawn selected when press on hitbox that allow to.
-Upgrade:
+	▪ Spawn selected when press on spawn zon.
+Modifiers:
+	▪ Level up to choose modifiers.
 	▪ 3 option each option will upgrade both the enemy and protag.
 	Types:
-		▪ More enemy slot.
-		▪ Unlock new enemy.
-			▪ Select which enemy to override if maxxed enemy slot.
-		▪ Increase base stats on an enemy.
-		▪ Increase money income and capacity.
+		▪ Random enemy in slot buff random stat - Protag buff random stat
+		▪ Hire an new enemy/Replace an enemy - Get an new weapon/Random stat buff
+		▪ Increase cash capacity/income - Increase medkit regen speed
 Protagonist:
 	▪ Attack enemy that aiming at it.
 	▪ Switch to fast weapon to clear alot of weak enemy.
 	▪ Dodging bullet.
 	▪ Using medkit when needed.
 	▪ Medkit recharge overtime.
+	▪ Stomp the floor when free.
 	▪ Display it GUI.
+	State:
+		...
 General:
 	▪ Health system.
-	▪ Exp System.
-	▪ Object pooling.
+	✓ Object pooling.

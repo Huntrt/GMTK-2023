@@ -454,6 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684660726}
+  - component: {fileID: 684660732}
   - component: {fileID: 684660728}
   - component: {fileID: 684660731}
   - component: {fileID: 684660730}
@@ -621,6 +622,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   curHealth: 0
+--- !u!114 &684660732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684660724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba6d9b70dc36854ebf37a6954809b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 10
+  cooldown: 2
+  icon: {fileID: 7657880569332490295, guid: 260b7fa9812088346ab9c0c7d1cb5257, type: 3}
 --- !u!1 &881155355
 GameObject:
   m_ObjectHideFlags: 0
