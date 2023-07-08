@@ -15,7 +15,7 @@ public class Movement_Spacing : Movement
 		if(distToTarget < dangerDistance) moveDir = -moveDir;
 		//Stop moving if in the safe zone
 		else if(distToTarget < safeDistance) moveDir = Vector2.zero;
-		//Begin basic movement
+		//Begin moving direction has setted
 		base.FixedUpdate();
 	}
 }
