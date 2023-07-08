@@ -8,7 +8,7 @@ Enemy:
 		▪ Firerate
 		▪ Damage
 	▪ Attacks:
-		▪ Firing - firing projectile in arrow of vector.
+		▪ Firing - firing projectile in array of vector.
 		▪ Slash - melee attack in an hitbox.
 		▪ Detonate - explode when get in certain range of protag.
 Spawn:
@@ -37,3 +37,4 @@ Protagonist:
 General:
 	▪ Health system.
 	▪ Exp System.
+	▪ Object pooling.
