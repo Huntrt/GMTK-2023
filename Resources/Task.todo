@@ -4,11 +4,12 @@ Movement:
 Enemy:
 	▪ Stats:
 		▪ Cost
-		▪ Speed
-		▪ Firerate
+		✓ Speed
+		✓ Firerate
 		▪ Damage
 	▪ Attacks:
-		▪ Firing - firing projectile in array of vector.
+		✓ Attacking when get in range
+		✓ Firing - firing projectile in array of vector.
 		▪ Slash - melee attack in an hitbox.
 		▪ Detonate - explode when get in certain range of protag.
 Spawn:
