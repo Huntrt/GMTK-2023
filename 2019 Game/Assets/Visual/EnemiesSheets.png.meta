@@ -68,6 +68,12 @@ TextureImporter:
   - first:
       213: -6527426216893505478
     second: Enemy_Shielder_Strike
+  - first:
+      213: -5702050925964801271
+    second: Enemy_Pack
+  - first:
+      213: 8836693595401390397
+    second: Enemy_Brute_Strike
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -614,7 +620,7 @@ TextureImporter:
         width: 4
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -622,6 +628,48 @@ TextureImporter:
       bones: []
       spriteID: a30ad74807ce965a0800000000000000
       internalID: -6527426216893505478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Pack
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 52
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b4ea2c4ee3ed0b0800000000000000
+      internalID: -5702050925964801271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Brute_Strike
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d398ed6910e32aa70800000000000000
+      internalID: 8836693595401390397
       vertices: []
       indices: 
       edges: []

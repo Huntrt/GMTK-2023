@@ -34,10 +34,10 @@ Enemy:
 		✓ 10. Shielder - High health but slow moving.
 		▪ 11. Doctor - heal lowest health enemy in radius. @consider
 		▪ 12. Assasin - hidden and appear when in melee range. @consider
-		▪ 13. Pack - Pack of 3 dog.
+		✓ 13. Pack - Pack of 3 dog.
 		▪ 14. Enrage - Massively increase move speed of nearby enemy. @consider
 		▪ 15. Healer - heal every enemy in an radius. @consider
-		▪ 16. Brute - strong and tanky.
+		✓ 16. Brute - strong and tanky.
 Spawn:
 	▪ Gain cash overtime (income).
 	▪ Have an max capacity of cash.
