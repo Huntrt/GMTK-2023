@@ -7,6 +7,11 @@ public class SpawnCurrency : MonoBehaviour
 	[Header("GUI")]
 	[SerializeField] TextMeshProUGUI cashDisplay;
 
+	void Start()
+	{
+		RefreshCashDisplay();
+	}
+
 	public void Earning(int earned)
 	{
 		cash += earned;

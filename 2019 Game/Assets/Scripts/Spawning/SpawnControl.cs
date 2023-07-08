@@ -60,6 +60,8 @@ public class SpawnControl : MonoBehaviour
 
 	void Selecting(int index)
 	{
+		//Stop if choose slot out of range
+		if(index >= slots.Count) return;
 		//Turn the previous select slot indicator to white
 		selected.selectIndicator.color = Color.white;
 		//Now select at given index
