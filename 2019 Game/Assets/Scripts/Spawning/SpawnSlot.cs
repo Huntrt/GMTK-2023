@@ -23,7 +23,7 @@ public class SpawnSlot : MonoBehaviour
 		//Timing cooldown timer until it got cooled
 		if(cooldownTimer < spawning.cooldown) cooldownTimer += Time.deltaTime; else isCooled = true;
 		//Refresh the cooldown bar fill percent
-		cooldownBar.fillAmount = cooldownTimer / spawning.cooldown;
+		cooldownBar.fillAmount = 1-(cooldownTimer / spawning.cooldown);
 	}
 	
 	public void RestartCool()
