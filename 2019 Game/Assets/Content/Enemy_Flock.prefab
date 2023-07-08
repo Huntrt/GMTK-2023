@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoCast: 0
   isReady: 0
-  firerate: 0.3
+  firerate: 3.5
   projectile: {fileID: 2328953689871463167, guid: e0b09b827a6319440b974d6f4bc91bf6,
     type: 3}
   points:

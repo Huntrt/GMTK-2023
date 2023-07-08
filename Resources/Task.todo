@@ -29,11 +29,11 @@ Enemy:
 		✓ 5. Archer - long range attack.
 		✓ 6. Zombie - slow moving but high health.
 		▪ 7. Rusher - increase moving speed of nearby enemy. @consider
-		▪ 8. Gunner - Using an pistol.
-		▪ 9. Predator - faster tracking and bigger explode.
-		▪ 10. Shielder - High health but slow moving.
+		✓ 8. Gunner - Using an pistol.
+		✓ 9. Predator - faster tracking and bigger explode.
+		✓ 10. Shielder - High health but slow moving.
 		▪ 11. Doctor - heal lowest health enemy in radius. @consider
-		▪ 12. Assasin - hidden and appear when attack range.
+		▪ 12. Assasin - hidden and appear when in melee range. @consider
 		▪ 13. Pack - Pack of 3 dog.
 		▪ 14. Enrage - Massively increase move speed of nearby enemy. @consider
 		▪ 15. Healer - heal every enemy in an radius. @consider
