@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 226428639812225573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.946, y: 1.747, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   hurtbox: {fileID: 226428639812225563}
-  damage: 0
-  velocity: 10
+  damage: 3
+  velocity: 8
   range: 6
   piercing: 1
   rb: {fileID: 226428639812225560}
@@ -94,14 +94,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.05}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.15, y: 0.05}
   m_EdgeRadius: 0
 --- !u!212 &226428639812225562
 SpriteRenderer:
@@ -142,9 +142,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6972405333296527281, guid: 8360107d212b38048a56083771cf3432,
+  m_Sprite: {fileID: 4597923323861706608, guid: 260b7fa9812088346ab9c0c7d1cb5257,
     type: 3}
-  m_Color: {r: 1, g: 0.2083492, b: 0.19999999, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

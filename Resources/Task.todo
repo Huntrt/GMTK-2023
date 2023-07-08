@@ -22,9 +22,9 @@ Enemy:
 		▪ Slash - melee attack in an hitbox.
 		▪ Detonate - explode when get in certain range of protag.
 	▪ List:
-		▪ 1. Missile - track and explode.
-		▪ 2. Flock - fast moving and melee attack.
-		▪ 3. Turret - fire bullet but fragile.
+		✓ 1. Missile - track and explode.
+		✓ 2. Flock - fast moving and melee attack.
+		✓ 3. Turret - fire bullet but fragile.
 		▪ 4. Dog - fast and deadly with decent health
 		▪ 5. Archer - long range attack.
 		▪ 6. Zombie - slow moving but high health.
