@@ -4,23 +4,24 @@ Outlines:
 	▪ Protag
 	▪ Leveling
 	▪ Modifier
+	▪ Floor
 
 Movement:
 	✓ Chasing
 	✓ Spacing
 Enemy:
 	▪ Stats:
-		▪ Cooldown
-		▪ Cost
+		✓ Cooldown
+		✓ Cost
 		✓ Speed
 		✓ Firerate
-		▪ Damage
+		✓ Damage
 		▪ Exp Drop
 	▪ Attacks:
 		✓ Attacking when get in range
 		✓ Firing - firing projectile in array of vector.
 		▪ Slash - melee attack in an hitbox.
-		▪ Detonate - explode when get in certain range of protag.
+		X Detonate - explode when get in certain range of protag.
 	▪ List:
 		✓ 1. Missile - track and explode.
 		✓ 2. Flock - fast moving and melee attack.
@@ -41,12 +42,18 @@ Enemy:
 Spawn:
 	▪ Gain cash overtime (income).
 	▪ Have an max capacity of cash.
-	▪ Spending when spawning enemy.
-	▪ Have 10 slot?
+	✓ Spending when spawning enemy.
+	✓ Have 10 slot?
 	▪ Able to buy new slot max at 10.
-	▪ Select spawn slot when press it key.
-	▪ Can re-bind each slot key but default are 1 -> 0.
-	▪ Spawn selected when press on spawn zone.
+	✓ Select spawn slot when press it key.
+	✓ Can re-bind each slot key but default are 1 -> 0.
+	✓ Spawn selected at muse position.
+	▪ Area that only for spawn.
+Floor:
+	▪ Have health (10?).
+	▪ Protag will stomp the floor.
+	▪ Change sprite base on health.
+	▪ Game over when floor out of health.
 Modifiers:
 	▪ Level up to choose modifiers.
 	▪ 3 option each option will upgrade both the enemy and protag.
@@ -55,15 +62,17 @@ Modifiers:
 		▪ Hire an new enemy/Replace an enemy - Get an new weapon/Random stat buff
 		▪ Increase cash capacity/income - Increase medkit regen speed
 Protagonist:
-	▪ Attack enemy that aiming at it.
-	▪ Switch to fast weapon to clear alot of weak enemy.
-	▪ Dodging bullet.
+	▪ Begin reviving when out of health.
+	▪ Dodging bullet. @consider
 	▪ Using medkit when needed.
 	▪ Medkit recharge overtime.
-	▪ Stomp the floor when free.
 	▪ Display it GUI.
 	State:
-		...
+		▪ Idle - do nothing mostly switch to stomp instantly.
+		▪ Crowd Control - use fast firirng weapon when weak enemy come near.
+		▪ Vengeance - attack enemy that target it from far away.
+		▪ Stomping - when no threat begin stomp he floor.
+		▪ Reviving - 10 second of unable to do anything.
 General:
 	▪ Health system.
 	✓ Object pooling.
