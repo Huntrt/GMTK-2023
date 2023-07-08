@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Font_Simple
   m_EditorClassIdentifier: 
-  hashCode: -341626541
+  hashCode: 188900322
   material: {fileID: -6187997282925849135}
-  materialHashCode: 400369811
+  materialHashCode: -808898302
   m_Version: 1.1.0
   m_SourceFontFileGUID: ddff14e0dc2939e45acb16ce59a7db6d
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: ddff14e0dc2939e45acb16ce59a7db6d,
