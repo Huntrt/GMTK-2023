@@ -10,6 +10,11 @@ public class SpawnSlot : MonoBehaviour
 	public float cooldownTimer;
 	public bool isCooled;
 
+	void OnEnable()
+	{
+		RefreshInfo();
+	}
+
 	public void Cooling()
 	{
 		//Stop if this slot are already cool
