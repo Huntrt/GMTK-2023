@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 6
   cooldown: 0.3
-  icon: {fileID: 3345169300149515224, guid: 260b7fa9812088346ab9c0c7d1cb5257, type: 3}
+  icon: {fileID: -4015396976009335227, guid: 260b7fa9812088346ab9c0c7d1cb5257, type: 3}
 --- !u!114 &4161586297113255964
 MonoBehaviour:
   m_ObjectHideFlags: 0
