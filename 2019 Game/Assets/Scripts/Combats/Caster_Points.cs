@@ -5,7 +5,7 @@ public class Caster_Points : Caster
 	[SerializeField] GameObject projectile;
     [SerializeField] Transform[] points;
 
-	public override void Casting()
+	public override void Casting(bool force = true)
 	{
 		base.Casting();
 		//Go through all the point

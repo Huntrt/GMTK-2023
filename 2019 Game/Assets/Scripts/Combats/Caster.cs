@@ -21,10 +21,10 @@ public class Caster : MonoBehaviour
 		if(!isReady) firerateTimer += Time.deltaTime;
 	}
 
-    public virtual void Casting()
+    public virtual void Casting(bool force = false)
 	{
-		//Don't cast if not ready
-		if(!isReady) return;
+		//Don't cast if not ready while not need to force it
+		if(!isReady && !force) return;
 	}
 
 	protected void CastEnded()
