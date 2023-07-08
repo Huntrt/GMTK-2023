@@ -5,7 +5,7 @@ public class Aim : MonoBehaviour
 	[SerializeField] Transform[] firepoints;
 	[SerializeField] Caster caster;
 	[SerializeField] float detect;
-    [SerializeField] Transform target; public Transform Target {get; set;}
+    [SerializeField] Transform target; public Transform Target {get => target; set => target = value;}
 
 	void Update()
 	{
