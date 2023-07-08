@@ -130,7 +130,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45343273}
-  - component: {fileID: 45343275}
   - component: {fileID: 45343274}
   - component: {fileID: 45343272}
   m_Layer: 10
@@ -226,23 +225,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &45343275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45343271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fcb71df9c7a11459afad743e4fd1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 45343274}
-  speed: 0
-  moveDir: {x: 0, y: 0}
-  safeDistance: 0
-  dangerDistance: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684660726}
   - component: {fileID: 684660728}
+  - component: {fileID: 684660731}
   - component: {fileID: 684660730}
   - component: {fileID: 684660729}
   - component: {fileID: 684660727}
@@ -487,6 +470,20 @@ MonoBehaviour:
   caster: {fileID: 684660729}
   detect: 4
   target: {fileID: 0}
+--- !u!114 &684660731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684660724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea4e4b61d38e104d90c30262468006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  curHealth: 0
 --- !u!1 &886352297
 GameObject:
   m_ObjectHideFlags: 0
