@@ -11,8 +11,9 @@ public class Movement : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 	}
 
-	void FixedUpdate()
+	protected virtual void FixedUpdate()
 	{
+		//Moving to direction has set with speed
 		rb.MovePosition(rb.position + (moveDir.normalized * speed) * Time.fixedDeltaTime);
 	}
 }

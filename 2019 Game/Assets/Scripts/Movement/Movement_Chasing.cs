@@ -2,9 +2,10 @@
 
 public class Movement_Chasing : Movement
 {
-    void Update()
+    protected override void FixedUpdate()
 	{
-		//if(Protag.i == null) return;
+		if(Protag.i == null) return;
+		//Set move direction toward the protagonist
 		moveDir = Protag.i.transform.position - transform.position;
 	}
 }
