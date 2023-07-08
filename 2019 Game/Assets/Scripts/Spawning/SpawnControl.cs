@@ -27,6 +27,12 @@ public class SpawnControl : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.Alpha9)) Selecting(8);
 		if(Input.GetKeyDown(KeyCode.Alpha0)) Selecting(9);
 		#endregion
+		//Go through all the slot
+		for (int s = 0; s < slots.Count; s++)
+		{
+			//To cool it
+			slots[s].Cooling();
+		}
 	}
 	void Selecting(int index)
 	{
