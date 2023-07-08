@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using System;
 
 public class Caster : MonoBehaviour
 {
 	public bool autoCast, isReady;
 	public float firerate; float firerateTimer;
+	public event Action onCast;
 
 	void Update()
 	{
@@ -27,6 +29,7 @@ public class Caster : MonoBehaviour
 
 	protected void CastEnded()
 	{
+		onCast?.Invoke();
 		isReady = false;
 		firerateTimer -= firerateTimer;
 	}
