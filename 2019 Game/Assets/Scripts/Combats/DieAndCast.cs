@@ -12,10 +12,12 @@ public class DieAndCast : MonoBehaviour
 		health.OnDeath += Cast;
 	}
 
-	void Die() {health.Die();}
-	void Cast() {caster.Casting(true);}
+	void Die() {StopListen(); health.Die();}
+	void Cast() {StopListen(); caster.Casting(true);}
 
-	void OnDisable()
+	void OnDisable() {StopListen();}
+
+	void StopListen()
 	{
 		caster.onCast -= Die;
 		health.OnDeath -= Cast;
