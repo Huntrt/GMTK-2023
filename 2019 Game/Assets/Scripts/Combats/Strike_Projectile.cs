@@ -4,7 +4,7 @@ public class Strike_Projectile : Strike
 {
     float travelled;
 	Vector3 prePos;
-	[SerializeField] Rigidbody rb;
+	[SerializeField] Rigidbody2D rb;
 	[SerializeField] TrailRenderer trail;
 
 	void OnEnable()
@@ -43,7 +43,7 @@ public class Strike_Projectile : Strike
 		prePos = rb.position;
 	}
 
-	void OnCollisionEnter(Collision other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
 		//Does hit anything entity?
 		Health hitted = null;
@@ -55,7 +55,7 @@ public class Strike_Projectile : Strike
 			//Dealing damage to hitted entity
 			hitted.Damaging(damage);
 			//Static ignore the collision object
-			Physics.IgnoreCollision(hurtbox, other.collider);
+			Physics2D.IgnoreCollision(hurtbox, other.collider);
 			//Has pierced this entity
 			pierceds.Add(other.collider);
 			//End the static when out of pierced
