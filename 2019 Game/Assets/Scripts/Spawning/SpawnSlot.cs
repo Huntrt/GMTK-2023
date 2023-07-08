@@ -17,6 +17,7 @@ public class SpawnSlot : MonoBehaviour
 
 	public void Cooling()
 	{
+		if(spawning == null) return;
 		//Stop if this slot are already cool
 		if(isCooled) return;
 		//Timing cooldown timer until it got cooled
@@ -33,6 +34,7 @@ public class SpawnSlot : MonoBehaviour
 
 	public void RefreshInfo()
 	{
+		if(spawning == null) return;
 		iconImage.sprite = spawning.icon;
 		costText.text = "$" + spawning.cost;
 	}
