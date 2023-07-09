@@ -41,7 +41,7 @@ public class SpawnControl : MonoBehaviour
 	void NewSlot(EnemySpawning enemy)
 	{
 		//temp: max amount of slot allowing
-		if(slots.Count >= 10) {Debug.LogError("Maxxed slot amount"); return;}
+		if(slots.Count >= 5) {Debug.LogError("Maxxed slot amount"); return;}
 		//Create an new slot 
 		GameObject newSlotGUI = Instantiate(slotGUIPrefab);
 		//Group the new slot
@@ -83,7 +83,7 @@ public class SpawnControl : MonoBehaviour
 		//Check if spawning position is on the limit
 		if(Physics2D.Raycast(mousePos, Vector2.zero, 0, spawnLimt))
 		{
-			print("Cant spawn in limit!");
+			Popup.i.Pop("Cant spawn here", mousePos);
 			return;
 		}
 		//Allow to spawn when cooldown over
