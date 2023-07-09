@@ -7,15 +7,22 @@ public class Health : MonoBehaviour
 	public float CurHealth {get => curHealth;}
 	public delegate void onDamage(float taken); public onDamage OnDamage;
 	public delegate void onDeath(); public onDeath OnDeath;
+	public float invincible; bool isInvincible;
 
 	void OnEnable()
 	{
 		//Use max health as current health upon spawn
 		curHealth = maxHealth;
+		//Are now invincible then begin cooldown
+		isInvincible = true; Invoke("EndInvincible", invincible);
 	}
+
+	void EndInvincible() {isInvincible = false;}
 
 	public void Damaging(float taken)
 	{
+		//Take no damage if invincible
+		if(isInvincible && taken > 0) return;
 		//Current health got decrease by damage taken
 		curHealth -= taken;
 		//Prevent health from going out of bounds

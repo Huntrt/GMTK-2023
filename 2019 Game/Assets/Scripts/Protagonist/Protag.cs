@@ -28,17 +28,13 @@ public class Protag : MonoBehaviour
 	{
 		health.OnDamage += RefreshHealthGUI;
 		health.OnDeath += Revive;
+		RefreshHealthGUI(0);
 	}
 
 	void OnDisable()
 	{
 		health.OnDamage -= RefreshHealthGUI;
 		health.OnDeath -= Revive;
-	}
-
-	void Start()
-	{
-		RefreshHealthGUI(0);
 	}
 
 	void RefreshHealthGUI(float taken)

@@ -3372,6 +3372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 0
+  invincible: 1
 --- !u!61 &1567625081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4743,6 +4744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   curHealth: 0
+  invincible: 0
 --- !u!114 &2011962466164519945
 MonoBehaviour:
   m_ObjectHideFlags: 0
