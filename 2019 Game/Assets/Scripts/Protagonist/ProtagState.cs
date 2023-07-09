@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Protag_State : MonoBehaviour
+public class ProtagState : MonoBehaviour
 {
     [SerializeField] enum State
 	{
