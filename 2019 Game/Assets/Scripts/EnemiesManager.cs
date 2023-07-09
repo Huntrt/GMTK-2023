@@ -18,4 +18,5 @@ public class EnemiesManager : MonoBehaviour
 	#endregion
 
 	public List<Transform> enemies = new List<Transform>();
+	public List<EnemySpawning> unlockable;
 }

@@ -37,7 +37,8 @@ public class Leveling : MonoBehaviour
 			curExp = curExp - expNeeded;
 			//Level up
 			level++;
-			//?... do something when level up
+			//Show modifer to choose when level up
+			ShowModifiers.i.Show();
 		}
 		RefreshGUI();
 	}

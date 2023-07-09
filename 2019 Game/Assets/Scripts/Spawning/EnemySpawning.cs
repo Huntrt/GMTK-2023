@@ -6,6 +6,7 @@ public class EnemySpawning : MonoBehaviour
 	public float cooldown;
 	public float exp;
 	public Sprite icon;
+	public string trueName {get => gameObject.name.Replace("Enemy_", "");}
 
 	void OnEnable()
 	{

@@ -5,7 +5,7 @@ public class SpawnControl : MonoBehaviour
 {
 	[SerializeField] GameObject slotGUIPrefab;
 	[SerializeField] Transform slotGUIGroup;
-	[SerializeField] List<SpawnSlot> slots = new List<SpawnSlot>();
+	public List<SpawnSlot> slots = new List<SpawnSlot>();
 	[SerializeField] int currentlySelect;
 	[SerializeField] LayerMask spawnLimt;
 	[SerializeField] TMPro.TextMeshProUGUI selectText;
@@ -38,21 +38,31 @@ public class SpawnControl : MonoBehaviour
 		}
 	}
 
-	void NewSlot(EnemySpawning enemy)
+	public void Hiring(EnemySpawning enemy)
 	{
-		//temp: max amount of slot allowing
-		if(slots.Count >= 5) {Debug.LogError("Maxxed slot amount"); return;}
-		//Create an new slot 
-		GameObject newSlotGUI = Instantiate(slotGUIPrefab);
-		//Group the new slot
-		newSlotGUI.transform.SetParent(slotGUIGroup);
-		//Get the spawn slot component of slot gui just create
-		SpawnSlot newSlotSpawn = newSlotGUI.GetComponent<SpawnSlot>();
-		//Added new slot into list
-		slots.Add(newSlotSpawn);
-		//Set the given enemy is the enemy this slot will have
-		newSlotSpawn.spawning = enemy;
-		newSlotSpawn.RefreshInfo();
+		//Go through all slot
+		for (int s = 0; s < slots.Count; s++)
+		{
+			//If this slot empty
+			if(slots[s].spawning == null)
+			{
+				//@ Added given enemy to slot and refresh it
+				slots[s].spawning = enemy;
+				slots[s].RefreshInfo();
+				slots[s].RestartCool();
+				return;
+			}
+		}
+	}
+
+	public void Replace(EnemySpawning enemy, int replacing)
+	{
+		//@ Replace the given slot imdex with given enemy
+		slots[replacing].spawning = enemy;
+		slots[replacing].RefreshInfo();
+		slots[replacing].RestartCool();
+		//Re-select if currently select the slot been replace
+		if(currentlySelect == replacing) Selecting(replacing);
 	}
 
 	void Selecting(int index)
@@ -67,8 +77,7 @@ public class SpawnControl : MonoBehaviour
 		selected.selectIndicator.color = Color.yellow;
 		if(selected.spawning != null)
 		{
-			string selectName = selected.spawning.gameObject.name;
-			selectText.text = selectName.Replace("Enemy_", "");
+			selectText.text = selected.spawning.trueName;
 		}
 		else
 		{

@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class ProtagEquip : MonoBehaviour
 {
-	[SerializeField] List<ProtagWeapon> unlockedWeapon = new List<ProtagWeapon>();
-	[SerializeField] List<ProtagWeapon> lockedWeapon = new List<ProtagWeapon>();
+	public List<ProtagWeapon> unlockedWeapon = new List<ProtagWeapon>();
+	public List<ProtagWeapon> lockedWeapon = new List<ProtagWeapon>();
 	[SerializeField] SpriteRenderer protagSprite;
 	public int currentIndex;
 	public ProtagWeapon currentWeapon;
