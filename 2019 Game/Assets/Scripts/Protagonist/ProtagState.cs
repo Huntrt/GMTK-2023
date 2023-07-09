@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEngine.UI;
+using UnityEngine;
 
 public class ProtagState : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class ProtagState : MonoBehaviour
 		Reviving, // 10 second of unable to do anything.
 	}
 	[SerializeField] State currentState;
+	[SerializeField] ProtagEquip equip;
+	[SerializeField] Health protagHealth;
 	[SerializeField] float meleeRange;
+	[SerializeField] float stompDuration; float stompDurationTimer;
+	[SerializeField] GameObject stompGUI;
+	[SerializeField] Image stompBar;
 	[SerializeField] float revivingDuration;
 	[SerializeField] LayerMask enemyLayer;
-	[SerializeField] Health protagHealth;
-	[SerializeField] ProtagEquip equip;
 
 	void OnEnable()
 	{
@@ -27,15 +31,30 @@ public class ProtagState : MonoBehaviour
 		protagHealth.OnDamage -= GotAnnoyed;
 	}
 
+	void SetTarget(Transform target) 
+	{
+		//Set current target to be given
+		equip.currentTarget = target;
+		//If there is no target
+		if(target == null)
+		{
+			//Current state are now stomping
+			currentState = State.Stomping;
+		}
+		//Show stomping GUI
+		stompGUI.SetActive(target == null);
+	}
+
 	void Update()
 	{
 		//If there is target but it is inactive
 		if(equip.currentTarget != null) if(!equip.currentTarget.gameObject.activeInHierarchy)
 		{
 			//No longer have target
-			equip.currentTarget = null;
+			SetTarget(null);
 		}
 		InMeleeRange();
+		Stomping();
 	}
 
 	void InMeleeRange()
@@ -49,7 +68,7 @@ public class ProtagState : MonoBehaviour
 			if(currentState != State.Melee || equip.currentTarget == null)
 			{
 				//Set current target to be enemy got scan
-				equip.currentTarget = scan.collider.gameObject.transform;
+				SetTarget(scan.collider.gameObject.transform);
 			}
 			//Change stage
 			currentState = State.Melee;
@@ -70,6 +89,20 @@ public class ProtagState : MonoBehaviour
 		//Get the list of enemy
 		var enemies = EnemiesManager.i.enemies;
 		//Randomly an enemy in the list
-		equip.currentTarget = enemies[Random.Range(0, enemies.Count)].transform;
+		SetTarget(enemies[Random.Range(0, enemies.Count)].transform);
+	}
+
+	void Stomping()
+	{
+		if(currentState != State.Stomping) return;
+		//@ Basic timer for stomping
+		stompDurationTimer += Time.deltaTime;
+		if(stompDurationTimer >= stompDuration)
+		{
+			print("Stomped");
+			stompDurationTimer -= stompDurationTimer;
+		}
+		//Display stomp progress
+		stompBar.fillAmount = stompDurationTimer/stompDuration;
 	}
 }
