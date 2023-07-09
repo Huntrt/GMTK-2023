@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 3
   cooldown: 0.3
+  exp: 3
   icon: {fileID: 3345169300149515224, guid: 260b7fa9812088346ab9c0c7d1cb5257, type: 3}
 --- !u!114 &1895714931825958617
 MonoBehaviour:
@@ -68,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   curHealth: 0
+  invincible: 0
 --- !u!114 &1895714931825958618
 MonoBehaviour:
   m_ObjectHideFlags: 0
