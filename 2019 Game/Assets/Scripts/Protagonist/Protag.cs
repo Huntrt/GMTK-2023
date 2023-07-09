@@ -16,5 +16,6 @@ public class Protag : MonoBehaviour
 	}
 	#endregion
 
-	
+	public ProtagEquip equip;
+	public ProtagState state;
 }
