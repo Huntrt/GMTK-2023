@@ -1,10 +1,10 @@
 Outlines:
 	✓ Spawning
 	✓ Enemy
-	▪ Protag
+	✓ Protag
 	▪ Leveling
 	▪ Modifier
-	▪ Floor
+	✓ Floor
 
 Movement:
 	✓ Chasing
@@ -44,7 +44,7 @@ Spawn:
 	✓ Have an max capacity of cash.
 	✓ Spending when spawning enemy.
 	✓ Have 10 slot?
-	▪ Able to buy new slot max at 10.
+	X Able to buy new slot max at 10.
 	✓ Select spawn slot when press it key.
 	✓ Can re-bind each slot key but default are 1 -> 0.
 	✓ Spawn selected at muse position.

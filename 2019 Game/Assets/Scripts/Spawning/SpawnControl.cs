@@ -28,11 +28,6 @@ public class SpawnControl : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.Alpha3)) Selecting(2);
 		if(Input.GetKeyDown(KeyCode.Alpha4)) Selecting(3);
 		if(Input.GetKeyDown(KeyCode.Alpha5)) Selecting(4);
-		if(Input.GetKeyDown(KeyCode.Alpha6)) Selecting(5);
-		if(Input.GetKeyDown(KeyCode.Alpha7)) Selecting(6);
-		if(Input.GetKeyDown(KeyCode.Alpha8)) Selecting(7);
-		if(Input.GetKeyDown(KeyCode.Alpha9)) Selecting(8);
-		if(Input.GetKeyDown(KeyCode.Alpha0)) Selecting(9);
 		#endregion
 		//Go through all the slot
 		for (int s = 0; s < slots.Count; s++)
