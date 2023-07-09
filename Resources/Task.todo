@@ -74,7 +74,7 @@ Protagonist:
 		▪ Stomping - when no threat begin stomp he floor.
 		▪ Reviving - 10 second of unable to do anything.
 General:
-	▪ Health system.
+	✓ Health system.
 	✓ Object pooling.
 
 Bugs:
