@@ -147,9 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e463d9d56c9ce44191e97085464c1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    damage: 25
+    velocity: 1
+    range: 0.4
+  firerate: 0.34
   autoCast: 0
   isReady: 0
-  firerate: 0.34
   projectile: {fileID: 5262505825936162479, guid: 4a6bd02477b5a6d4aaa7377872b79006,
     type: 3}
   points:
