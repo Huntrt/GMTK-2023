@@ -66,11 +66,11 @@ public class ProtagState : MonoBehaviour
 			{
 				//Set current target to be enemy got scan
 				SetTarget(scan.collider.gameObject.transform);
+				//Switch to an rapid firing weapon
+				equip.SwitchWeaponType(ProtagWeapon.Type.rapid);
 			}
-			//Change stage
+			//Enter melee stage
 			currentState = State.Melee;
-			//Switch to an rapid firing weapon
-			equip.SwitchWeaponType(ProtagWeapon.Type.rapid);
 		}
 	}
 
