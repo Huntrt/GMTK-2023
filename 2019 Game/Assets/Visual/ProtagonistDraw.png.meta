@@ -40,13 +40,13 @@ TextureImporter:
     second: Protagonist_StandardBullet
   - first:
       213: -1528782265849463048
-    second: Protagonist_MinigunBullet
+    second: Protagonist_Minigun_Strike
   - first:
       213: 7042117207788282080
-    second: Protagonist_BarrettBullet
+    second: Protagonist_Barrett_Strike
   - first:
       213: -2820528870366847429
-    second: Protagonist_RailBullet
+    second: Protagonist_Rail_Strike
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonist_MinigunBullet
+      name: Protagonist_Minigun_Strike
       rect:
         serializedVersion: 2
         x: 27
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonist_BarrettBullet
+      name: Protagonist_Barrett_Strike
       rect:
         serializedVersion: 2
         x: 35
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonist_RailBullet
+      name: Protagonist_Rail_Strike
       rect:
         serializedVersion: 2
         x: 51
