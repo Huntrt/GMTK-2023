@@ -18,4 +18,5 @@ public class Protag : MonoBehaviour
 
 	public ProtagEquip equip;
 	public ProtagState state;
+	public Health health;
 }

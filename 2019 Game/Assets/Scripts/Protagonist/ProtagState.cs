@@ -13,7 +13,6 @@ public class ProtagState : MonoBehaviour
 	}
 	[SerializeField] State currentState;
 	[SerializeField] ProtagEquip equip;
-	[SerializeField] Health protagHealth;
 	[SerializeField] float meleeRange;
 	[SerializeField] float stompDuration; float stompDurationTimer;
 	[SerializeField] GameObject stompGUI;
@@ -24,12 +23,12 @@ public class ProtagState : MonoBehaviour
 
 	void OnEnable()
 	{
-		protagHealth.OnDamage += GotAnnoyed;
+		Protag.i.health.OnDamage += GotAnnoyed;
 	}
 
 	void OnDisable()
 	{
-		protagHealth.OnDamage -= GotAnnoyed;
+		Protag.i.health.OnDamage -= GotAnnoyed;
 	}
 
 	void SetTarget(Transform target) 
