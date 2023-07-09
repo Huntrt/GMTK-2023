@@ -46,6 +46,6 @@ public class SpawnCurrency : MonoBehaviour
 	void RefreshCashDisplay()
 	{
 		//Display cash in format: $ 553/1000 +12/s
-		cashDisplay.text = "$" + cash + " +" + System.Math.Round(1/income, 1) + "/s";
+		cashDisplay.text = "$" + cash + " +" + System.Math.Round(income, 1) + "/s";
 	}
 }

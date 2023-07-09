@@ -18,17 +18,14 @@ public class SpawnControl : MonoBehaviour
 
 	void Update()
 	{
-		//todo: add keybind for 'single spawn'
-		if(Input.GetKeyDown(KeyCode.Mouse0)) Spawning();
-		//todo: add keybind for 'rapid spawn'
-		if(Input.GetKey(KeyCode.Mouse1)) Spawning();
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.SingleSpawn)) Spawning();
+		if(Input.GetKey(Game.Operator.SessionOperator.i.keys.RapidSpawn)) Spawning();
 		#region Select with key
-		//todo: replace with keybinds (clean up?)
-		if(Input.GetKeyDown(KeyCode.Alpha1)) Selecting(0);
-		if(Input.GetKeyDown(KeyCode.Alpha2)) Selecting(1);
-		if(Input.GetKeyDown(KeyCode.Alpha3)) Selecting(2);
-		if(Input.GetKeyDown(KeyCode.Alpha4)) Selecting(3);
-		if(Input.GetKeyDown(KeyCode.Alpha5)) Selecting(4);
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.Slot1)) Selecting(0);
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.Slot2)) Selecting(1);
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.Slot3)) Selecting(2);
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.Slot4)) Selecting(3);
+		if(Input.GetKeyDown(Game.Operator.SessionOperator.i.keys.Slot5)) Selecting(4);
 		#endregion
 		//Go through all the slot
 		for (int s = 0; s < slots.Count; s++)
