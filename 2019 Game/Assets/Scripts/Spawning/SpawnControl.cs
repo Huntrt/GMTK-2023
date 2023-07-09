@@ -8,6 +8,7 @@ public class SpawnControl : MonoBehaviour
 	[SerializeField] List<SpawnSlot> slots = new List<SpawnSlot>();
 	[SerializeField] int currentlySelect;
 	[SerializeField] LayerMask spawnLimt;
+	[SerializeField] TMPro.TextMeshProUGUI selectText;
 	SpawnSlot selected {get => slots[currentlySelect];}
 
 	void Start()
@@ -64,6 +65,15 @@ public class SpawnControl : MonoBehaviour
 		currentlySelect = index;
 		//Currently select slot indicator to be yellow
 		selected.selectIndicator.color = Color.yellow;
+		if(selected.spawning != null)
+		{
+			string selectName = selected.spawning.gameObject.name;
+			selectText.text = selectName.Replace("Enemy_", "");
+		}
+		else
+		{
+			selectText.text = "empty";
+		}
 	}
 
 	void Spawning()
