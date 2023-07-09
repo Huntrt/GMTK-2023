@@ -41,8 +41,6 @@ public class ProtagState : MonoBehaviour
 			//Current state are now stomping
 			currentState = State.Stomping;
 		}
-		//Show stomping GUI
-		stompGUI.SetActive(target == null);
 	}
 
 	void Update()
