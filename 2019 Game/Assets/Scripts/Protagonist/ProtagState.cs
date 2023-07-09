@@ -5,11 +5,10 @@ public class ProtagState : MonoBehaviour
 {
     [SerializeField] enum State
 	{
-		Idle,// do nothing mostly switch to stomp instantly.
+		None,
 		Melee, //attack close up enemy with crowd control weapon.
 		Annoyed, //attack enemy from far away if got got hurt by it.
 		Stomping, // when no threat begin stomp he floor.
-		Reviving, // 10 second of unable to do anything.
 	}
 	[SerializeField] State currentState;
 	[SerializeField] ProtagEquip equip;

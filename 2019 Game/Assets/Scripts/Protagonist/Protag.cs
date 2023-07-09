@@ -19,6 +19,7 @@ public class Protag : MonoBehaviour
 
 	public ProtagEquip equip;
 	public ProtagState state;
+	public ProtagRevive revive;
 	public Health health;
 	[SerializeField] Image healthBar;
 	[SerializeField] TMPro.TextMeshProUGUI healthCount;
@@ -26,11 +27,13 @@ public class Protag : MonoBehaviour
 	void OnEnable()
 	{
 		health.OnDamage += RefreshHealthGUI;
+		health.OnDeath += Revive;
 	}
 
 	void OnDisable()
 	{
 		health.OnDamage -= RefreshHealthGUI;
+		health.OnDeath -= Revive;
 	}
 
 	void Start()
@@ -42,5 +45,10 @@ public class Protag : MonoBehaviour
 	{
 		healthBar.fillAmount = health.CurHealth/health.MaxHealth;
 		healthCount.text = health.CurHealth.ToString();
+	}
+
+	void Revive()
+	{
+		revive.BeginRevive(transform.position);
 	}
 }

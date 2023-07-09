@@ -13,6 +13,6 @@ public class EnemySpawning : MonoBehaviour
 
 	void OnDisable()
 	{
-		EnemiesManager.i.enemies.Remove(transform);
+		if(EnemiesManager.i != null) EnemiesManager.i.enemies.Remove(transform);
 	}
 }

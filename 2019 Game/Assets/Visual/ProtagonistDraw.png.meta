@@ -47,6 +47,9 @@ TextureImporter:
   - first:
       213: -2820528870366847429
     second: Protagonist_Rail_Strike
+  - first:
+      213: -2753727840758491326
+    second: Protagonist_Grave
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -454,6 +457,27 @@ TextureImporter:
       bones: []
       spriteID: b3edc0bafe77bd8d0800000000000000
       internalID: -2820528870366847429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonist_Grave
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 8
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2479c736e1bc8c9d0800000000000000
+      internalID: -2753727840758491326
       vertices: []
       indices: 
       edges: []
