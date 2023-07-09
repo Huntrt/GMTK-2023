@@ -3,7 +3,10 @@ using TMPro;
 
 public class SpawnCurrency : MonoBehaviour
 {
-    [SerializeField] int cash; public int Cash {get => cash;}
+	[SerializeField] float maxCash;
+    [SerializeField] float cash; public float Cash {get => cash;}
+	[SerializeField] float income; public float Income {get => income; set {income = value; RefreshCashDisplay();}}
+	float incomeTimer;
 	[Header("GUI")]
 	[SerializeField] TextMeshProUGUI cashDisplay;
 
@@ -12,9 +15,20 @@ public class SpawnCurrency : MonoBehaviour
 		RefreshCashDisplay();
 	}
 
+	void Update()
+	{
+		incomeTimer += Time.deltaTime;
+		if(incomeTimer >= 1/income)
+		{
+			Earning(1);
+			incomeTimer -= incomeTimer;
+		}
+	}
+
 	public void Earning(int earned)
 	{
 		cash += earned;
+		cash = Mathf.Clamp(cash, 0, maxCash);
 		RefreshCashDisplay();
 	}
 
@@ -33,6 +47,7 @@ public class SpawnCurrency : MonoBehaviour
 
 	void RefreshCashDisplay()
 	{
-		cashDisplay.text = "$" + cash;
+		//Display cash in format: $ 553/1000 +12/s
+		cashDisplay.text = "$" + cash + "/" + maxCash + " +" + System.Math.Round(1/income, 1) + "/s";
 	}
 }

@@ -40,8 +40,8 @@ Enemy:
 		▪ 15. Healer - heal every enemy in an radius. @consider
 		✓ 16. Brute - strong and tanky.
 Spawn:
-	▪ Gain cash overtime (income).
-	▪ Have an max capacity of cash.
+	✓ Gain cash overtime (income).
+	✓ Have an max capacity of cash.
 	✓ Spending when spawning enemy.
 	✓ Have 10 slot?
 	▪ Able to buy new slot max at 10.
