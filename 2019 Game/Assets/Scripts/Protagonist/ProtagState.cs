@@ -97,7 +97,8 @@ public class ProtagState : MonoBehaviour
 		stompDurationTimer += Time.deltaTime;
 		if(stompDurationTimer >= stompDuration)
 		{
-			print("Stomped");
+			//Stomp the floor
+			Floor.i.Stomped();
 			stompDurationTimer -= stompDurationTimer;
 		}
 		//Display stomp progress

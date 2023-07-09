@@ -50,9 +50,9 @@ Spawn:
 	✓ Spawn selected at muse position.
 	▪ Area that only for spawn.
 Floor:
-	▪ Have health (10?).
-	▪ Protag will stomp the floor.
-	▪ Change sprite base on health.
+	✓ Have health (10?).
+	✓ Protag will stomp the floor.
+	✓ Change sprite base on health.
 	▪ Game over when floor out of health.
 Modifiers:
 	▪ Level up to choose modifiers.
