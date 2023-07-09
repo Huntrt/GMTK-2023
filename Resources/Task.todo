@@ -20,7 +20,7 @@ Enemy:
 	▪ Attacks:
 		✓ Attacking when get in range
 		✓ Firing - firing projectile in array of vector.
-		▪ Slash - melee attack in an hitbox.
+		X Slash - melee attack in an hitbox.
 		X Detonate - explode when get in certain range of protag.
 	▪ List:
 		✓ 1. Missile - track and explode.
@@ -48,7 +48,7 @@ Spawn:
 	✓ Select spawn slot when press it key.
 	✓ Can re-bind each slot key but default are 1 -> 0.
 	✓ Spawn selected at muse position.
-	▪ Area that only for spawn.
+	✓ Area that only for spawn.
 Floor:
 	✓ Have health (10?).
 	✓ Protag will stomp the floor.

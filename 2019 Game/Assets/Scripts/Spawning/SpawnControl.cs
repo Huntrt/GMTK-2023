@@ -7,6 +7,7 @@ public class SpawnControl : MonoBehaviour
 	[SerializeField] Transform slotGUIGroup;
 	[SerializeField] List<SpawnSlot> slots = new List<SpawnSlot>();
 	[SerializeField] int currentlySelect;
+	[SerializeField] LayerMask spawnLimt;
 	SpawnSlot selected {get => slots[currentlySelect];}
 
 	void Start()
@@ -72,6 +73,14 @@ public class SpawnControl : MonoBehaviour
 
 	void Spawning()
 	{
+		//Spawn at mouse position
+		Vector2 mousePos = MousePosition.i.World();
+		//Check if spawning position is on the limit
+		if(Physics2D.Raycast(mousePos, Vector2.zero, 0, spawnLimt))
+		{
+			print("Cant spawn in limit!");
+			return;
+		}
 		//Allow to spawn when cooldown over
 		if(!selected.isCooled) return;
 		//Allow to spawn when have enough cash to spend on it
@@ -79,6 +88,6 @@ public class SpawnControl : MonoBehaviour
 		//Reset the selected slot cooldown
 		selected.RestartCool();
 		//Pooling the selected spawning at mouse position
-		Pooler.i.Create(selected.spawning.gameObject, MousePosition.i.World(), Quaternion.identity);
+		Pooler.i.Create(selected.spawning.gameObject, mousePos, Quaternion.identity);
 	}
 }
