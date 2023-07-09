@@ -6,7 +6,7 @@ public class Modifers_Income : Modifiers
 
 	public override void Modify(bool oppose)
 	{
-		SpawnManager.i.currency.Income += SpawnManager.i.currency.Income/percent;
+		SpawnManager.i.currency.Income += (percent/100) * SpawnManager.i.currency.Income;
 		base.Modify(oppose);
 	}
 }

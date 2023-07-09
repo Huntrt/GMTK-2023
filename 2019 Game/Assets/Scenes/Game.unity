@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppose: {fileID: 90020661}
-  percent: 10
+  percent: 25
 --- !u!1 &754801226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,7 +5953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase your income by 10%
+  m_text: Increase your income by 25%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 477068b1ecd06b54eaa798e68de140b9, type: 2}
   m_sharedMaterial: {fileID: -6187997282925849135, guid: 477068b1ecd06b54eaa798e68de140b9,
@@ -7380,7 +7380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cash: 100
-  income: 2
+  income: 5
   cashDisplay: {fileID: 1071576738}
 --- !u!114 &1827577084
 MonoBehaviour:
