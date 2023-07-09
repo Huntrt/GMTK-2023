@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8941961671657222185}
   - component: {fileID: 8941961671657222184}
   m_Layer: 9
-  m_Name: Protagonist_Revovler_Strike
+  m_Name: Protagonist_Standard_Strike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
