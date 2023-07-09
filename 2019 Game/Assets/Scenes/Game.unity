@@ -495,6 +495,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &337727714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337727715}
+  - component: {fileID: 337727716}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337727715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337727714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1305872674}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337727716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337727714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3f636c0cd8d934e93a61d9d839bef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  curExp: 0
+  expNeeded: 100
+  expBar: {fileID: 1908348408}
+  expCount: {fileID: 1452749536}
 --- !u!1 &360047726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,6 +2308,7 @@ Transform:
   m_Children:
   - {fileID: 1248635627}
   - {fileID: 1827577082}
+  - {fileID: 337727715}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4131,6 +4180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   cooldown: 2
+  exp: 0
   icon: {fileID: 7657880569332490295, guid: 260b7fa9812088346ab9c0c7d1cb5257, type: 3}
 --- !u!4 &2011962466635614809
 Transform:
