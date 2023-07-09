@@ -3,8 +3,9 @@ using System;
 
 public class Caster : MonoBehaviour
 {
-	public bool autoCast, isReady;
+	[SerializeField] protected Strike.Stats stats;
 	public float firerate; float firerateTimer;
+	[HideInInspector]public bool autoCast, isReady;
 	public event Action onCast;
 
 	void OnEnable()

@@ -31,11 +31,11 @@ public class Strike_Projectile : Strike
 	void FixedUpdate()
 	{
 		//Moving right with set velocity
-		rb.velocity = transform.right * velocity;
+		rb.velocity = transform.right * stats.velocity;
 		//Get how long has travelled this frame
 		travelled += Vector3.Distance(prePos, rb.position);
 		//If has reached max range
-		if(travelled >= range)
+		if(travelled >=  stats.range)
 		{
 			//End the projectile
 			End();
@@ -54,7 +54,7 @@ public class Strike_Projectile : Strike
 			//Get the health of entity got hitted
 			hitted = other.collider.GetComponent<Health>();
 			//Dealing damage to hitted entity
-			hitted.Damaging(damage);
+			hitted.Damaging(stats.damage);
 			//Static ignore the collision object
 			Physics2D.IgnoreCollision(hurtbox, other.collider);
 			//Has pierced this entity

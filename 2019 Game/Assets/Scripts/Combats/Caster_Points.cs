@@ -12,7 +12,9 @@ public class Caster_Points : Caster
 		foreach (Transform point in points)
 		{
 			//Pool projectile at this point position and using point rotation
-			Pooler.i.Create(projectile, point.position, point.rotation);
+			GameObject pooled = Pooler.i.Create(projectile, point.position, point.rotation);
+			//Overwrite stats of strike pooled
+			pooled.GetComponent<Strike>().stats = stats;
 		}
 		//Cast over
 		CastEnded();

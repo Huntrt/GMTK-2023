@@ -4,9 +4,12 @@ using System;
 
 public class Strike : MonoBehaviour
 {
+	public Stats stats; [System.Serializable] public class Stats
+	{
+  	  public float damage, velocity, range;
+	}
 	public LayerMask damageLayer;
 	public Collider2D hurtbox;
-    public float damage, velocity, range;
 	public int piercing; protected List<Collider2D> pierceds = new List<Collider2D>();
 	public delegate void onContact(Health contacted, Vector2 contactPos); public onContact OnContact;
 
