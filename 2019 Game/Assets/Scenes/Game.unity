@@ -1082,7 +1082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.00003, y: 50}
+  m_AnchoredPosition: {x: -100, y: 60}
   m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660290419
@@ -2974,6 +2974,7 @@ MonoBehaviour:
   stompDuration: 3
   stompGUI: {fileID: 619108532}
   stompBar: {fileID: 1741017508}
+  stompText: {fileID: 782464704}
   revivingDuration: 0
   enemyLayer:
     serializedVersion: 2

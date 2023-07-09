@@ -18,6 +18,7 @@ public class ProtagState : MonoBehaviour
 	[SerializeField] float stompDuration; float stompDurationTimer;
 	[SerializeField] GameObject stompGUI;
 	[SerializeField] Image stompBar;
+	[SerializeField] TMPro.TextMeshProUGUI stompText;
 	[SerializeField] float revivingDuration;
 	[SerializeField] LayerMask enemyLayer;
 
@@ -88,8 +89,8 @@ public class ProtagState : MonoBehaviour
 		equip.SwitchWeaponType(ProtagWeapon.Type.sniping);
 		//Get the list of enemy
 		var enemies = EnemiesManager.i.enemies;
-		//Randomly an enemy in the list
-		SetTarget(enemies[Random.Range(0, enemies.Count)].transform);
+		//Randomly target an enemy in the list
+		if(enemies.Count > 0) SetTarget(enemies[Random.Range(0, enemies.Count)].transform);
 	}
 
 	void Stomping()
@@ -104,5 +105,7 @@ public class ProtagState : MonoBehaviour
 		}
 		//Display stomp progress
 		stompBar.fillAmount = stompDurationTimer/stompDuration;
+		//Show stomp text in format: 84%
+		stompText.text = (int)((stompDurationTimer/stompDuration) * 100) + "%";
 	}
 }
