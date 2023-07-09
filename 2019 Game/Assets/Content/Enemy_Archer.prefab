@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee5ab2f51937b48bfdbbceecb8c3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: 0}
   firepoints:
   - {fileID: 8412881903694602912}
   caster: {fileID: 8412881905019865830}
@@ -171,7 +172,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &8412881905019865828
 SpriteRenderer:
   m_ObjectHideFlags: 0
