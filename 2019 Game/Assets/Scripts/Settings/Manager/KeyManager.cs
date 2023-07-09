@@ -7,8 +7,8 @@ public class KeyManager : MonoBehaviour
 {
 	//---------------------------------------------------------------------
 	/// Add the action you want below (enum and keycode NEED TO BE MATCH)
-	public enum Binds {Up, Down, Left, Right}
-	public KeyCode Up, Down, Left, Right;
+	public enum Binds {Slot1, Slot2, Slot3, Slot4, Slot5, SingleSpawn, RapidSpawn}
+	public KeyCode Slot1, Slot2, Slot3, Slot4, Slot5, SingleSpawn, RapidSpawn;
 	//---------------------------------------------------------------------
 	[Tooltip("Will replace key label text when binding it")]
 	[SerializeField] string waitingMessage;
