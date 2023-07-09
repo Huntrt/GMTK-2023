@@ -60,7 +60,7 @@ Modifiers:
 	Types:
 		▪ Random enemy in slot buff random stat - Protag buff random stat
 		▪ Hire an new enemy/Replace an enemy - Get an new weapon/Random stat buff
-		▪ Increase cash capacity/income - Increase medkit regen speed
+		▪ Increase cash capacity/income - Increase medkit recharge/Decrease revive duration
 Protagonist:
 	▪ Begin reviving when out of health.
 	▪ Dodging bullet. @consider
@@ -68,10 +68,10 @@ Protagonist:
 	▪ Medkit recharge overtime.
 	▪ Display it GUI.
 	State:
-		▪ Idle - do nothing mostly switch to stomp instantly.
+		✓ Idle - do nothing mostly switch to stomp instantly.
 		X Crowd Control - use fast firirng weapon when weak enemy come near.
 		X Vengeance - attack enemy that target it from far away.
-		▪ Melee - attack close up enemy with crowd control weapon.
+		✓ Melee - attack close up enemy with crowd control weapon.
 		▪ Range - attack enemy from far away if got got hurt by it.
 		▪ Stomping - when no threat begin stomp he floor.
 		▪ Reviving - 10 second of unable to do anything.
@@ -82,3 +82,5 @@ General:
 Bugs:
 	▪ Explosion strike are physic collide with protag @minimal
 		Just cause visual bug replace it with trigger or raycast should fix
+	▪ Weapon aimming are inaccurate base on firepoint position @caution
+		All weapon will have same fire point (ugly viusally)
