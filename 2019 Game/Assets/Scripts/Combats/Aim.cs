@@ -18,8 +18,10 @@ public class Aim : MonoBehaviour
 
 	void Update()
 	{
-		//Stop if there no target or no longer active
-		if(target == null && !target.gameObject.activeInHierarchy) return;
+		//Stop if there no target
+		if(target == null) return;
+		//Stop if there target no longer active
+		if(!target.gameObject.activeInHierarchy) return;
 		//Make all firepoint aim toward target direction
 		foreach (var firepoint in firepoints) firepoint.right = dirTotarget;
 		//Begin auto cast when the target get in detection
