@@ -50,6 +50,9 @@ TextureImporter:
   - first:
       213: -2753727840758491326
     second: Protagonist_Grave
+  - first:
+      213: 4506020703313172549
+    second: Blank
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -470,7 +473,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,6 +481,27 @@ TextureImporter:
       bones: []
       spriteID: 2479c736e1bc8c9d0800000000000000
       internalID: -2753727840758491326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blank
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 47
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548998ba4f9988e30800000000000000
+      internalID: 4506020703313172549
       vertices: []
       indices: 
       edges: []

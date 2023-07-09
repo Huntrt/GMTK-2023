@@ -84,3 +84,4 @@ Bugs:
 		Just cause visual bug replace it with trigger or raycast should fix
 	▪ Weapon aiming are inaccurate base on firepoint position @caution
 		All weapon will have same fire point (ugly viusally)
+	▪ Annoyd state insta lock on @caution
