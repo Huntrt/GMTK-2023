@@ -19,14 +19,15 @@ public class Floor : MonoBehaviour
 	[SerializeField] int health;
 	[SerializeField] SpriteRenderer spriteRenderer;
 	[SerializeField] Sprite[] floorBreaks;
+	[SerializeField] GameObject gameOverPanel;
 
 	public void Stomped()
 	{
 		health--;
-		spriteRenderer.sprite = floorBreaks[health-1];
+		if(health > 0) spriteRenderer.sprite = floorBreaks[health-1];
 		if(health <= 0)
 		{
-			print("Game Over");
+			gameOverPanel.SetActive(true);
 		}
 	}
 }
