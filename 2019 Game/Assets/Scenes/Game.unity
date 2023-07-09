@@ -2899,6 +2899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equip: {fileID: 1567625084}
   state: {fileID: 1567625083}
+  health: {fileID: 1567625080}
+  healthBar: {fileID: 2083743328}
+  healthCount: {fileID: 946656139}
 --- !u!4 &1567625079
 Transform:
   m_ObjectHideFlags: 0
@@ -2969,7 +2972,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 3
   equip: {fileID: 1567625084}
-  protagHealth: {fileID: 1567625080}
   meleeRange: 3
   stompDuration: 3
   stompGUI: {fileID: 619108532}
